@@ -1,0 +1,42 @@
+[user]
+	name = Oğuzhan Onur ARSLANTUĞ
+	email = o.arslantug@gmail.com
+[core]
+	editor = code --wait
+	whitespace = -trailing-space
+	excludesFile = ~/.gitignore
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[diff]
+	mnemonicPrefix = true
+	renames = true
+	wordRegex = .
+	submodule = log
+[log]
+	abbrevCommit = true
+	decorate = short
+[push]
+	default = upstream
+	followTags = true
+[rebase]
+	autoSquash = true
+[merge]
+	ff = only
+[tag]
+	sort = version:refname
+[versionsort]
+	prereleaseSuffix = -pre
+	prereleaseSuffix = .pre
+	prereleaseSuffix = -beta
+	prereleaseSuffix = .beta
+	prereleaseSuffix = -rc
+	prereleaseSuffix = .rc
+[status]
+	showUntrackedFiles = all
+[alias]
+	lagd = log --all --graph --decorate --oneline
