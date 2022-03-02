@@ -39,4 +39,5 @@
 [status]
 	showUntrackedFiles = all
 [alias]
+	ss = status -s
 	lagd = log --all --graph --decorate --oneline
