@@ -41,4 +41,5 @@
 [alias]
 	ss = status -s
 	diffs = diff --staged
-	lagd = log --all --graph --decorate --oneline
+	# amend = "!git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
+	lagd = log --color=always --all --graph --decorate --oneline --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
