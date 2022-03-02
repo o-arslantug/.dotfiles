@@ -40,4 +40,5 @@
 	showUntrackedFiles = all
 [alias]
 	ss = status -s
+	diffs = diff --staged
 	lagd = log --all --graph --decorate --oneline
