@@ -1,0 +1,293 @@
+[com/github/maoschanz/DynamicWallpaperEditor]
+display-mode='list'
+
+[org/gnome/Totem]
+active-plugins=['apple-trailers', 'screenshot', 'movie-properties', 'open-directory', 'variable-rate', 'rotation', 'media-player-keys', 'recent', 'vimeo', 'skipto', 'autoload-subtitles', 'screensaver', 'save-file']
+subtitle-encoding='UTF-8'
+
+[org/gnome/control-center]
+last-panel='keyboard'
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2022-02-22T14:17:00.752626Z'
+
+[org/gnome/desktop/a11y]
+always-show-universal-access-status=false
+
+[org/gnome/desktop/app-folders]
+folder-children=['accessories', 'office', 'system-tools']
+
+[org/gnome/desktop/app-folders/folders/accessories]
+apps=['yad-icon-browser.desktop', 'uget-gtk.desktop', 'de.haeckerfelix.Fragments.desktop']
+categories=['Utility']
+excluded-apps=['gnome-layouts.desktop', 'manjaro-documentation.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Maps.desktop']
+name='Accessories'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/office]
+categories=['Office']
+name='Office'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/system-tools]
+apps=['qvidcap.desktop', 'qv4l2.desktop', 'bssh.desktop', 'bvnc.desktop', 'hp-uiscan.desktop']
+categories=['System', 'Settings']
+excluded-apps=['org.manjaro.pamac.manager.desktop']
+name='System Tools'
+translate=true
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='stretched'
+picture-uri='file:///usr/share/backgrounds/wallpapers-2018/mountains-1412683.jpg'
+primary-color='#ffffff'
+secondary-color='#000000'
+
+[org/gnome/desktop/calendar]
+show-weekdate=false
+
+[org/gnome/desktop/input-sources]
+per-window=false
+sources=[('xkb', 'tr')]
+xkb-options=['lv3:ralt_switch']
+
+[org/gnome/desktop/interface]
+clock-show-date=true
+clock-show-seconds=false
+clock-show-weekday=true
+cursor-theme='xcursor-breeze'
+enable-animations=true
+enable-hot-corners=false
+font-antialiasing='grayscale'
+font-hinting='slight'
+locate-pointer=false
+show-battery-percentage=false
+text-scaling-factor=1.0
+
+[org/gnome/desktop/media-handling]
+autorun-x-content-ignore=@as []
+autorun-x-content-open-folder=@as []
+autorun-x-content-start-app=['x-content/ostree-repository']
+
+[org/gnome/desktop/notifications]
+application-children=['firefox', 'org-gnome-nautilus']
+
+[org/gnome/desktop/notifications/application/firefox]
+application-id='firefox.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
+[org/gnome/desktop/peripherals/mouse]
+accel-profile='flat'
+
+[org/gnome/desktop/peripherals/touchpad]
+send-events='enabled'
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+disable-microphone=false
+remember-recent-files=false
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+lock-delay=uint32 0
+lock-enabled=false
+picture-options='stretched'
+picture-uri='file:///usr/share/backgrounds/wallpapers-2018/mountains-1412683.jpg'
+primary-color='#ffffff'
+secondary-color='#000000'
+
+[org/gnome/desktop/search-providers]
+disabled=['org.gnome.Contacts.desktop']
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/session]
+idle-delay=uint32 0
+
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=false
+
+[org/gnome/desktop/wm/keybindings]
+activate-window-menu=@as []
+begin-move=@as []
+begin-resize=@as []
+cycle-group=@as []
+cycle-group-backward=@as []
+cycle-panels=@as []
+cycle-panels-backward=@as []
+maximize=@as []
+move-to-workspace-10=['<Shift><Super>0']
+move-to-workspace-5=['<Shift><Super>5']
+move-to-workspace-6=['<Shift><Super>6']
+move-to-workspace-7=['<Shift><Super>7']
+move-to-workspace-8=['<Shift><Super>8']
+move-to-workspace-9=['<Shift><Super>9']
+move-to-workspace-down=['<Super><Alt><Shift>Down', '<Control><Alt><Shift>Down', '<Super><Shift>s']
+move-to-workspace-last=@as []
+move-to-workspace-up=['<Super><Alt><Shift>Up', '<Control><Alt><Shift>Up', '<Super><Shift>w']
+panel-run-dialog=@as []
+switch-group=@as []
+switch-group-backward=@as []
+switch-input-source=@as []
+switch-input-source-backward=@as []
+switch-panels=@as []
+switch-panels-backward=@as []
+switch-to-workspace-10=['<Super>0']
+switch-to-workspace-5=['<Super>5']
+switch-to-workspace-6=['<Super>6']
+switch-to-workspace-7=['<Super>7']
+switch-to-workspace-8=['<Super>8']
+switch-to-workspace-9=['<Super>9']
+switch-to-workspace-down=['<Alt><Super>Down', '<Primary><Alt>Down']
+switch-to-workspace-last=@as []
+switch-to-workspace-left=['<Super>Page_Up', '<Alt><Super>Left', '<Primary><Alt>Left']
+switch-to-workspace-up=['<Super><Alt>Up', '<Control><Alt>Up', '<Super>w']
+toggle-fullscreen=['<Super>Up']
+toggle-maximized=@as []
+
+[org/gnome/desktop/wm/preferences]
+action-double-click-titlebar='toggle-maximize'
+button-layout=':minimize,maximize,close'
+
+[org/gnome/evince/default]
+window-ratio=(0.98039215686274506, 0.75757575757575757)
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/gedit/plugins]
+active-plugins=['spell', 'docinfo', 'modelines', 'filebrowser', 'sort']
+
+[org/gnome/gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/oa/Downloads'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(900, 700)
+state=87168
+
+[org/gnome/mutter]
+overlay-key='Super_L'
+workspaces-only-on-primary=true
+
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=['<Super>Left']
+toggle-tiled-right=['<Super>Right']
+
+[org/gnome/mutter/wayland/keybindings]
+restore-shortcuts=@as []
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+search-view='list-view'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+maximized=true
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=false
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+help=@as []
+magnifier=@as []
+magnifier-zoom-in=@as []
+magnifier-zoom-out=@as []
+screenreader=@as []
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Primary><Alt>t'
+command='gnome-terminal'
+name='Terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Alt>space'
+command='rofi -show drun'
+name='Rofi'
+
+[org/gnome/settings-daemon/plugins/power]
+idle-dim=false
+power-button-action='interactive'
+sleep-inactive-ac-type='nothing'
+
+[org/gnome/shell]
+app-picker-layout=[{'org.gnome.Geary.desktop': <{'position': <0>}>, 'accessories': <{'position': <1>}>, 'org.gnome.gThumb.desktop': <{'position': <2>}>, 'gnome-layouts.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'org.gnome.Lollypop.desktop': <{'position': <5>}>, 'manjaro-documentation.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'office': <{'position': <8>}>, 'system-tools': <{'position': <9>}>, 'simple-scan.desktop': <{'position': <10>}>, 'webapp-manager.desktop': <{'position': <11>}>, 'google-chrome.desktop': <{'position': <12>}>}]
+command-history=['terminal', 'xfce4-terminal', 'gnome-terminal']
+disable-user-extensions=false
+disabled-extensions=['dash-to-panel@jderose9.github.com', 'unite@hardpixel.eu', 'arcmenu@arcmenu.com', 'ding@rastersoft.com', 'vertical-overview@RensAlthuis.github.com', 'material-shell@papyelgringo']
+enabled-extensions=['pamac-updates@manjaro.org', 'gnome-ui-tune@itstime.tech', 'x11gestures@joseexposito.github.io', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com']
+favorite-apps=['firefox.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Terminal.desktop', 'org.manjaro.pamac.manager.desktop']
+welcome-dialog-last-shown-version='41.3'
+
+[org/gnome/shell/extensions/arcmenu]
+available-placement=[true, false, false]
+pinned-app-list=['Firefox', '', 'firefox.desktop', 'Files', '', 'org.gnome.Nautilus.desktop', 'Terminal', '', 'org.gnome.Terminal.desktop', 'ArcMenu Settings', 'ArcMenu_ArcMenuIcon', 'gnome-extensions prefs arcmenu@arcmenu.com']
+recently-installed-apps=['cups.desktop', 'qt6ct.desktop']
+
+[org/gnome/shell/extensions/dash-to-dock]
+dock-fixed=false
+dock-position='BOTTOM'
+extend-height=false
+intellihide=true
+show-apps-at-top=true
+
+[org/gnome/shell/extensions/dash-to-panel]
+available-monitors=[0]
+
+[org/gnome/shell/extensions/vertical-overview]
+override-dash=false
+
+[org/gnome/shell/keybindings]
+focus-active-notification=@as []
+open-application-menu=@as []
+switch-to-application-1=['<Super>1']
+switch-to-application-2=['<Super>2']
+switch-to-application-3=['<Super>3']
+switch-to-application-4=['<Super>4']
+switch-to-application-5=['<Super>5']
+switch-to-application-6=['<Super>6']
+switch-to-application-7=['<Super>7']
+switch-to-application-8=['<Super>8']
+switch-to-application-9=['<Super>9']
+toggle-application-view=@as []
+toggle-message-tray=@as []
+toggle-overview=@as []
+
+[org/gnome/shell/world-clocks]
+locations=@av []
+
+[org/gnome/terminal/legacy]
+new-terminal-mode='tab'
+theme-variant='dark'
+
+[org/gnome/tweaks]
+show-extensions-notice=false
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=163
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+window-position=(345, 84)
+window-size=(1231, 902)
