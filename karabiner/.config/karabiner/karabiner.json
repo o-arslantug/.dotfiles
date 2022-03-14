@@ -506,14 +506,14 @@
                         ]
                     },
                     {
-                        "description": "CTRL+L => Logout (CGSession -suspend)",
+                        "description": "Super+L => Lock (pmset displaysleepnow)",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "left_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -522,7 +522,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/System/Library/CoreServices/Menu\\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+                                        "shell_command": "pmset displaysleepnow"
                                     }
                                 ],
                                 "type": "basic"
