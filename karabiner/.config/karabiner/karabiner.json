@@ -27,6 +27,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -64,6 +65,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -101,6 +103,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -143,6 +146,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -185,6 +189,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -227,6 +232,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -269,6 +275,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -312,6 +319,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -349,6 +357,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -391,6 +400,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -433,6 +443,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -475,6 +486,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -541,6 +553,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -575,6 +588,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -609,6 +623,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
@@ -646,6 +661,7 @@
                                             "^com\\.parallels\\.desktop$",
                                             "^com\\.parallels\\.desktop\\.console$",
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.philandro\\.anydesk$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$"
