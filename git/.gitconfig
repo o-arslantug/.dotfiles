@@ -8,7 +8,7 @@
 	whitespace = -trailing-space
 	excludesFile = ~/.gitignore
 [init]
-	defaultBranch = main 
+	defaultBranch = master 
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
