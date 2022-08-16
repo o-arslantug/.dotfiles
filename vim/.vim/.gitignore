@@ -1,0 +1,20 @@
+# DENY EVERYTHING EXCEPT THOSE ALLOWED
+#
+# !FILE             #; ALLOW FILE
+# !DIRECTORY        #; ALLOW DIRECTORY
+#   !DIRECTORY/**   #; ALLOW EVERYTHING IN THE DIRECTORY
+#   !DIRECTORY/FILE #; ALLOW SPECIFIC FILE IN THE DIRECTORY
+
+# DENY
+**/**
+
+# ALLOW
+!.gitignore
+!autoload
+!autoload/**
+!backup
+!backup/**
+!color
+!color/**
+!plugged
+!plugged/**
