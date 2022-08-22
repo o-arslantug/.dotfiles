@@ -4,6 +4,7 @@
 	name = Oğuzhan Onur ARSLANTUĞ
 	email = o.arslantug@gmail.com
 [core]
+	editor = vim
 	whitespace = -trailing-space
 	excludesFile = ~/.gitignore
 [init]
