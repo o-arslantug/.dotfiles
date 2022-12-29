@@ -29,7 +29,8 @@
 	default = upstream
 	followTags = true
 [rebase]
-	autoSquash = true
+    autoSquash = true
+    abbreviateCommands = true
 [merge]
 	ff = only
 [tag]
