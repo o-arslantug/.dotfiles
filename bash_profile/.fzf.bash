@@ -1,0 +1,1 @@
+source "/usr/local/share/fzf/shell/key-bindings.bash"
