@@ -1,33 +1,52 @@
 #!/bash
 
+### HISTORY ###
+
+# defines the history file, by default ~/.bash_history
+export HISTFILE=~/.bash_profile_history
+
+# controls how bash stores command history
+#   ignorespace: flag will ignore commands that start with spaces
+#   ignoredups: will ignore duplicates
+#   ignoreboth will ignore both spaces and duplicates
+export HISTCONTROL=ignorespace:ignoredups
+
+# ignore the given commands which is below for history
+export HISTIGNORE="ls*:cd*:history*:clear:exit"
+
+# defines the number of lines of history to save in memory (by default 500)
+export HISTSIZE=500
+
+# defines the number of lines of history to save in the history file when the shell exits (by default 500)
+export HISTFILESIZE=5000
+
+# it is used as a strftime format string to display the time stamp associated with each displayed history entry
+export HISTTIMEFORMAT="%T %F  |  "
+
+# the history list is appended to the file named by the value of the HISTFILE variable when the shell exits
+# rather than overwriting the file
+shopt -s histappend
+
+# bash checks the window size after each external (non-builtin) command
+# if necessary, updates the values of LINES and COLUMNS
+# this option is enabled by default
+shopt -s checkwinsize
+
+### HISTORY END ###
+
+export PATH="/usr/local/sbin:$PATH"
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+### BASH-COMPLETION ###
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-export PATH="/usr/local/sbin:$PATH"
+### BASH-COMPLETION END ###
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth:erasedups
-
-# ignore the given commands which is below for history
-HISTIGNORE="ls*:cd*:history*:clear:exit"
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
@@ -88,29 +107,11 @@ if [ -x /usr/bin/dircolors ]; then
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    alias egrep='egrep --color=auto'ear
 fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -122,19 +123,21 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-# Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
-if type brew &>/dev/null
-then
-  HOMEBREW_PREFIX="$(brew --prefix)"
-  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
-  then
-    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
-  else
-    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
-    do
-      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
-    done
+# M1 Mac Bash-Completion compatibility
+if [ -f /opt/homebrew/bin/brew ]; then
+  # Set PATH, MANPATH, etc., for Homebrew.
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  if type brew &>/dev/null; then
+    HOMEBREW_PREFIX="$(brew --prefix)"
+    if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+      source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+    else
+      for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+      do
+        [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+      done
+    fi
   fi
 fi
