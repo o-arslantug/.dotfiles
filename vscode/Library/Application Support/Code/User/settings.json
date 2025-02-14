@@ -1,12 +1,13 @@
 {
+    "breadcrumbs.icons": true,
     "breadcrumbs.enabled": true,
+    "breadcrumbs.filePath": "on",
     "css.completion.completePropertyWithSemicolon": false,
     "editor.accessibilitySupport": "off",
-    "editor.bracketPairColorization.enabled": false,
-    "editor.codeLens": false,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
     "editor.dragAndDrop": false,
     "editor.fastScrollSensitivity": 10,
-    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontFamily": "\"JetBrains Mono\", monospace",
     "editor.glyphMargin": false,
     "editor.hover.delay": 256,
     "editor.inlineSuggest.enabled": true,
@@ -17,13 +18,16 @@
     "editor.scrollBeyondLastLine": false,
     "editor.showFoldingControls": "always",
     "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": false,
     "editor.suggest.preview": false,
+    "editor.suggest.showSnippets": true,
+    "editor.snippetSuggestions": "inline",
     "editor.trimAutoWhitespace": true,
     "editor.unfoldOnClickAfterEndOfLine": true,
     "editor.unicodeHighlight.allowedLocales": {
         "tr": true
     },
-    "editor.quickSuggestionsDelay": 16,
+    "editor.quickSuggestionsDelay": 32,
     "editor.wordWrap": "on",
     "emmet.excludeLanguages": [
         "markdown"
@@ -41,6 +45,10 @@
     "emmet.variables": {},
     "explorer.autoReveal": false,
     "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+    "explorer.excludeGitIgnore": false,
+    "explorer.decorations.badges": false,
+    "explorer.decorations.colors": true,
     "files.autoSave": "onFocusChange",
     "files.exclude": {
         ".github": true,
@@ -49,9 +57,6 @@
         ".well-known": true
     },
     "files.simpleDialog.enable": true,
-    "files.readonlyInclude": {
-        "**/vendor/**": true
-    },
     "files.trimTrailingWhitespace": true,
     "git.defaultBranchName": "master",
     "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
@@ -78,13 +83,20 @@
         "-workbench.welcomePage.walkthroughs.openOnInstall"
     ],
     "telemetry.telemetryLevel": "off",
-    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.copyOnSelection": false,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 1,
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.defaultProfile.osx": "bash",
     "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.hideOnStartup": "never",
     "vetur.format.options.tabSize": 4,
     "window.autoDetectHighContrast": false,
+    "window.commandCenter": false,
     "window.confirmBeforeClose": "keyboardOnly",
+    "window.customTitleBarVisibility": "never",
+    "window.titleBarStyle": "native",
     "workbench.colorTheme": "Darcula Theme from IntelliJ",
     "workbench.colorCustomizations": {
         "statusBar.prominentBackground": "#101010"
@@ -92,12 +104,12 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.focusRecentEditorAfterClose": false,
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.tabCloseButton": "off",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 10,
     "workbench.hover.delay": 256,
     "workbench.sash.hoverDelay": 256,
     "workbench.startupEditor": "none",
+    "workbench.tree.enableStickyScroll": false,
     "workbench.tree.indent": 16,
 
     // #lint
@@ -138,6 +150,11 @@
     "css.hover.references": false,
     "less.hover.references": false,
     "scss.hover.references": false,
-    "terraform.codelens.referenceCount": true,
-    "html.hover.references": false
+    "html.hover.references": false,
+    "editor.codeLens": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.tabActionCloseVisibility": false,
+    "editor.unicodeHighlight.includeStrings": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.bracketPairColorization.enabled": false
 }
