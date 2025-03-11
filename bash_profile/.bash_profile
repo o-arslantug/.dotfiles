@@ -124,12 +124,31 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# M1 Mac Bash-Completion compatibility
+# Apple Silicon Mac Bash-Completion compatibility
 if [ -f /opt/homebrew/bin/brew ]; then
   # Set PATH, MANPATH, etc., for Homebrew.
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
   if type brew &>/dev/null; then
+    HOMEBREW_PREFIX="$(brew --prefix)"
+    if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+      source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+    else
+      for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+      do
+        [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+      done
+    fi
+  fi
+fi
+
+# Intel Mac Bash-Completion compatibility
+if [ -f /usr/local/bin/brew ]; then
+  # Set PATH, MANPATH, etc., for Homebrew.
+  eval "$(/usr/local/bin/brew shellenv)"
+
+  if type brew &>/dev/null
+  then
     HOMEBREW_PREFIX="$(brew --prefix)"
     if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
       source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
