@@ -40,7 +40,11 @@ export PATH="/usr/local/sbin:$PATH"
 
 ### BASH-COMPLETION ###
 
+# Intel Mac Bash-Completion compatibility
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+# Apple Silicon Mac Bash-Completion compatibility
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 ### BASH-COMPLETION END ###
 
