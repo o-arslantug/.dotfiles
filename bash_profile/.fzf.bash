@@ -1,1 +1,1 @@
-source "/usr/local/share/fzf/shell/key-bindings.bash"
+source "/opt/homebrew/opt/fzf/shell/key-bindings.bash"
