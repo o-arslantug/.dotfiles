@@ -8,7 +8,7 @@
 	whitespace = -trailing-space
 	excludesFile = ~/.gitignore
 [init]
-	defaultBranch = master 
+	defaultBranch = master
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -47,5 +47,5 @@
 [alias]
 	ss = status -s
 	diffs = diff --staged
-	# amend = "!git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
 	lagd = log --color=always --all --graph --decorate --oneline --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	divide = commit --allow-empty -m '------------------------ DIVISION ------------------------'
