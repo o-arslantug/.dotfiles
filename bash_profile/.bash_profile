@@ -1,9 +1,28 @@
 #!/bash
 
-### HISTORY ###
+## EXPORTS HOMEBREW VARIABLES AND SETS CONFIGURATIONS ##
 
-# defines the history file, by default ~/.bash_history
-export HISTFILE=~/.bash_profile_history
+if [[ -f "/opt/homebrew/bin/brew" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -f "/usr/local/bin/brew" ]]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+if [[ -n "$HOMEBREW_PREFIX" ]]; then
+    if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+        . "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+    fi
+
+    if [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
+        . "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash"
+    fi
+
+    if [ -f "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.bash" ]; then
+        . "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.bash"
+    fi
+fi
+
+## HISTORY ##
 
 # controls how bash stores command history
 #   ignorespace: flag will ignore commands that start with spaces
@@ -15,10 +34,10 @@ export HISTCONTROL=ignorespace:ignoredups
 export HISTIGNORE="ls*:cd*:history*:clear:exit"
 
 # defines the number of lines of history to save in memory (by default 500)
-export HISTSIZE=500
+export HISTSIZE=10000
 
 # defines the number of lines of history to save in the history file when the shell exits (by default 500)
-export HISTFILESIZE=5000
+export HISTFILESIZE=50000
 
 # it is used as a strftime format string to display the time stamp associated with each displayed history entry
 export HISTTIMEFORMAT="%T %F  |  "
@@ -32,37 +51,13 @@ shopt -s histappend
 # this option is enabled by default
 shopt -s checkwinsize
 
-### HISTORY END ###
+## HISTORY END ##
 
 export PATH="/usr/local/sbin:$PATH"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-### BASH-COMPLETION ###
-
-# Intel Mac Bash-Completion compatibility
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
-# Apple Silicon Mac Bash-Completion compatibility
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-
-### BASH-COMPLETION END ###
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -102,65 +97,11 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+# ruby configuration
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'ear
-fi
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-# Apple Silicon Mac Bash-Completion compatibility
-if [ -f /opt/homebrew/bin/brew ]; then
-  # Set PATH, MANPATH, etc., for Homebrew.
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-
-  if type brew &>/dev/null; then
-    HOMEBREW_PREFIX="$(brew --prefix)"
-    if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
-      source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
-    else
-      for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
-      do
-        [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
-      done
-    fi
-  fi
-fi
-
-# Intel Mac Bash-Completion compatibility
-if [ -f /usr/local/bin/brew ]; then
-  # Set PATH, MANPATH, etc., for Homebrew.
-  eval "$(/usr/local/bin/brew shellenv)"
-
-  if type brew &>/dev/null
-  then
-    HOMEBREW_PREFIX="$(brew --prefix)"
-    if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
-      source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
-    else
-      for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
-      do
-        [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
-      done
-    fi
-  fi
-fi
+alias lcc='php artisan route:clear && php artisan view:clear && php artisan config:clear && php artisan cache:clear && php artisan clear-compiled'
