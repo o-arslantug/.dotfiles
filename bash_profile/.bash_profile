@@ -104,4 +104,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
 export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 
+# python3 configuration
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
 alias lcc='php artisan route:clear && php artisan view:clear && php artisan config:clear && php artisan cache:clear && php artisan clear-compiled'
